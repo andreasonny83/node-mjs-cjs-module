@@ -3,20 +3,27 @@
   "version": "0.0.1",
   "description": "Sample Node module with mjs and cjs support",
   "private": "true",
-  "module": "index.mjs",
-  "main": "index.cjs",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
   "exports": {
-    "import": "./index.mjs",
-    "require": "./index.cjs"
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
   },
   "files": [
     "index.mjs",
     "index.cjs"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && ./fixup.sh"
   },
   "keywords": [],
   "author": "andreasonny83",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.10.3",
+    "typescript": "^4.4.3"
+  }
 }
