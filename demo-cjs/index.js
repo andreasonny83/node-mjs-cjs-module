@@ -1,4 +1,7 @@
-const { moduleA } = require("node-mjs-cjs-module");
+const { moduleA, moduleB } = require("node-mjs-cjs-module");
 
-const res = moduleA();
-console.log(res);
+const resA = moduleA();
+const resB = moduleB("This is CommonJS");
+
+console.log(resA);
+console.log(resB);
