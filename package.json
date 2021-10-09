@@ -1,0 +1,14 @@
+{
+  "name": "node-mjs-cjs-module",
+  "version": "0.0.1",
+  "description": "Sample Node module with mjs and cjs support",
+  "private": "true",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "andreasonny83",
+  "license": "ISC"
+}
