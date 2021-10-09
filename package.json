@@ -3,8 +3,16 @@
   "version": "0.0.1",
   "description": "Sample Node module with mjs and cjs support",
   "private": "true",
-  "main": "index.js",
-  "type": "module",
+  "module": "index.mjs",
+  "main": "index.cjs",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.cjs"
+  },
+  "files": [
+    "index.mjs",
+    "index.cjs"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
