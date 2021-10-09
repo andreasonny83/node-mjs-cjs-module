@@ -1,7 +1,9 @@
+import { HELLO, OUTPUT, WORLD } from "./core/constants.js";
+
 export const moduleA = (): string => {
-  return `Hello World!`;
+  return `${HELLO} ${WORLD}!`;
 };
 
 export const moduleB = (input: string): string => {
-  return `The output is ${input}`;
+  return `${OUTPUT}: ${input}`;
 };

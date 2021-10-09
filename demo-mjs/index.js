@@ -1,4 +1,7 @@
-import { moduleA } from "node-mjs-cjs-module";
+import { moduleA, moduleB } from "node-mjs-cjs-module";
 
-const res = moduleA();
-console.log(res);
+const resA = moduleA();
+const resB = moduleB("This is MJS");
+
+console.log(resA);
+console.log(resB);
